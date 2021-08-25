@@ -46,11 +46,17 @@ app.get("/url/emotion", (req,res) => {
         {
             "url": urlToAnalyze,
             "features": {
+                "entities" : {
+                    "emotion": true,
+                    "sentiment": true,
+                    "limit": 1
+                    },
                 "keywords": {
                     "emotion": true,
+                    "sentiment": true,
                     "limit": 1
-                            }
-                        }
+                    }
+            }
         }
      
     const naturalLanguageUnderstanding = getNLUInstance();
@@ -75,11 +81,17 @@ app.get("/url/sentiment", (req,res) => {
         {
             "url": urlToAnalyze,
             "features": {
-                "keywords": {
+                "entities" : {
+                    "emotion": true,
                     "sentiment": true,
                     "limit": 1
-                            }
-                        }
+                    },
+                "keywords": {
+                    "emotion": true,
+                    "sentiment": true,
+                    "limit": 1
+                    }
+            }
         }
      
     const naturalLanguageUnderstanding = getNLUInstance();
@@ -104,11 +116,17 @@ app.get("/text/emotion", (req,res) => {
         {
             "text": textToAnalyze,
             "features": {
+                "entities" : {
+                    "emotion": true,
+                    "sentiment": true,
+                    "limit": 1
+                    },
                 "keywords": {
                     "emotion": true,
+                    "sentiment": true,
                     "limit": 1
-                            }
-                        }
+                    }
+            }
         }
      
     const naturalLanguageUnderstanding = getNLUInstance();
@@ -132,11 +150,17 @@ app.get("/text/sentiment", (req,res) => {
         {
             "text": textToAnalyze,
             "features": {
-                "keywords": {
+                "entities" : {
+                    "emotion": true,
                     "sentiment": true,
                     "limit": 1
-                            }
-                        }
+                    },
+                "keywords": {
+                    "emotion": true,
+                    "sentiment": true,
+                    "limit": 1
+                    }
+            }
         }
      
     const naturalLanguageUnderstanding = getNLUInstance();
